@@ -2,6 +2,11 @@ package excercises;
 
 import java.util.Scanner;
 
+/**
+ * Ejercicio que pinta un rectangulo 
+ * dependiendo de la cantidad de lineas deseado
+ * **/
+
 public class squareAsterisks {
 	public static void main (String arg[]){
 		String entradaTeclado = "";
