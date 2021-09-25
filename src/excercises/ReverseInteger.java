@@ -1,16 +1,10 @@
 public class ReverseInteger {
 
 	public static void main(String[] args) {
-		System.out.println(Reverse(964632435));
-		
+		System.out.println(Reverse(-123));
 	}
-	
-	public static int Reverse(int _numero) {
-		int reverse = _numero;
-		if( ( reverse > Math.pow(2,31) -1 ) && ( reverse < Math.pow(-2,31) ) ) {
-			reverse = 0;
-			return reverse;
-		}
+	public static int Reverse(int x) {
+        int reverse = x;
 		
 		int j = 0;
 		int resultadoInt;
@@ -20,9 +14,8 @@ public class ReverseInteger {
 		if( reverse < 0 ) {
 			reverse *= -1;
 			isNegtive = true;
-			System.out.println(reverse);
 		}
-		String numCadena=String.valueOf(reverse);
+		String numCadena = String.valueOf(reverse);
 	
 		char[] arr = numCadena.toCharArray();
 		char[] aux = new char[arr.length];
@@ -43,15 +36,14 @@ public class ReverseInteger {
 		try {
 			resultadoInt = Integer.parseInt(resultado);
 		} catch (Exception e) {
-			resultadoInt = 0;
+			return 0;
 		}
-		
 		
 		if( isNegtive ) {
 			resultadoInt *= -1;
 		}
 		
 		return resultadoInt;
-		
-	}
+    }
+	
 }
